@@ -8,6 +8,8 @@ spec:
   url: https://github.com/ios-mcn-ran/ios-mcn-ran
   ref:
     branch: kube-orchestration
+  secretRef:
+    name: free5gc-github-auth
   ignore: |
     # exclude all
     /*
