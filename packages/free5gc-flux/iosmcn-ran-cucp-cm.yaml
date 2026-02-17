@@ -1,6 +1,6 @@
 kind: ConfigMap
 metadata:
-  name: 5gc-values
+  name: iosmcn-ran-cucp-values
   namespace: demo
 apiVersion: v1
 data:
@@ -10,8 +10,8 @@ data:
     ## In case of using these charts on Openshift then please use UBI images
     ## To know more about them follow this tutorial https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/tree/master/openshift
     nfimage:   # image name either locally present or in a public/private repository
-      repository: ghcr.io/ios-mcn-ran/ios-mcn-gnb-dis           ## dockerhub oaisoftwarealliance/oai-gnb  
-      version: v0.3.1.rc1.openairinterface5g # image tag or develop
+      repository: ghcr.io/ios-mcn/ios-mcn-gnb-dis           ## dockerhub oaisoftwarealliance/oai-gnb  
+      version: v0.4.0 # image tag or develop
       # pullPolicy: IfNotPresent or Never or Always
       pullPolicy: IfNotPresent
 
@@ -19,7 +19,7 @@ data:
     imagePullSecrets: 
       - name: "regcred"
 
-      serviceAccount:
+    serviceAccount:
       # Specifies whether a service account should be created
       create: true
       # Annotations to add to the service account
