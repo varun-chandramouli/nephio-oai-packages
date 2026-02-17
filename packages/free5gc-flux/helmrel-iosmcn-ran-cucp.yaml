@@ -1,23 +1,23 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: free5gc 
+  name: iosmcnran-cucp 
   namespace: demo
 spec:
   interval: 1m
   chart:
     spec:
-      chart: ./charts/free5gc 
-      version: '1.1.x'
+      chart: ./cicd/oai-5g-ran/oai-cu-cp
+      version: '2.0.0'
       sourceRef:
         kind: GitRepository
-        name: free5gc-gitrepo
+        name:  iosmcn-ran-cucp-gitrepo
         namespace: flux-system
       reconcileStrategy: Revision
       interval: 1m
   targetNamespace: demo
   valuesFrom:
   - kind: ConfigMap
-    name: 5gc-values
+    name: iosmcn-ran-cucp-values
     valuesKey: values.yaml
 
