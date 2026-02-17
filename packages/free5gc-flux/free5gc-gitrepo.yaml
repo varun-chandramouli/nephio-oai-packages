@@ -7,7 +7,7 @@ spec:
   interval: 10s
   url: https://github.com/ios-mcn-ran/ios-mcn-ran
   ref:
-    branch: main
+    branch: kube-orchestration
   ignore: |
     # exclude all
     /*
