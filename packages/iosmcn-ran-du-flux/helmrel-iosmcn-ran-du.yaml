@@ -15,7 +15,7 @@ spec:
         namespace: flux-system
       reconcileStrategy: Revision
       interval: 1m
-  targetNamespace: demo
+  targetNamespace: iosmcnran
   valuesFrom:
   - kind: ConfigMap
     name: iosmcn-ran-du-values
